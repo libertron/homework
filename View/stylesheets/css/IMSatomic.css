@@ -81,10 +81,6 @@ i{
 .bold{
 	font-weight: bold;
 }
-.facebook{
-	background: url('../img/fr/facebook.png') no-repeat;
-	background-size:cover;
-}
 .blue{
 	color:#619bc1;
 }
@@ -92,11 +88,10 @@ i{
 	background-color: #FFFFFF;
 }
 .bg_blue{
-	background-color: #0D54A0;
+	background-color: #3c538f;
 }
-.bg_doctor{
-	background: url('../img/fr/doctor.jpg') no-repeat;
-	background-size:cover;
+.bg_red{
+	background-color: #d32222;
 }
 .border{
 	border:1px solid black;
@@ -118,6 +113,9 @@ i{
 }
 .block{
 	display: block;
+}
+.inline-block{
+	display:inline-block;
 }
 .center{
 	text-align:center;
@@ -186,7 +184,4 @@ i{
 .hr{
 	width:90%;
 	margin:auto;
-}
-.relative{
-	position: relative;
 }
