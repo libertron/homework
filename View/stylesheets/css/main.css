@@ -1,28 +1,40 @@
+::-moz-selection { /* Code for Firefox */
+  color:none;
+  background:none;
+}
+
+::selection {
+  color:none; 
+  background:none;
+}
 .square{
 	height: 500px;
 	width:500px;
 }
 .ball{
-	width:60px;
-	height: 60px;
+	width:40px;
+	height: 40px;
+	cursor: crosshair;
 }
 #score,#timer,#start{
 	outline: none;
 	text-align: center;
 	font-size: 16px;
+	padding: 11px;
 }
 #score,#timer{
 	border:1px solid #969696;
 	background-color: #d8d8d8;
-	width:80px;
+	width:90px;
 	font-weight: 600;
-	padding: 5px;
+	cursor: default;
 }
 #start{
 	background-color: #514849;
 	color:#fff;
 	border:none;
 	border-radius: 6px;
-	padding: 8px;
 	margin-left: 3px;
+	letter-spacing: 1px;
+	cursor: pointer;
 }
