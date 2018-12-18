@@ -6,3 +6,23 @@
 	width:60px;
 	height: 60px;
 }
+#score,#timer,#start{
+	outline: none;
+	text-align: center;
+	font-size: 16px;
+}
+#score,#timer{
+	border:1px solid #969696;
+	background-color: #d8d8d8;
+	width:80px;
+	font-weight: 600;
+	padding: 5px;
+}
+#start{
+	background-color: #514849;
+	color:#fff;
+	border:none;
+	border-radius: 6px;
+	padding: 8px;
+	margin-left: 3px;
+}

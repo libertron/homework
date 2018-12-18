@@ -69,11 +69,14 @@ i{
 .white{
 	color:#FFFFFF;
 }
-.space{
+.double_space{
 	min-height: 60px;
 }
-.min_space{
+.space{
 	min-height: 30px;
+}
+.min_space{
+	min-height: 15px;
 }
 .gray{
 	color:#7B7B7B;
