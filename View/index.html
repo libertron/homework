@@ -4,6 +4,7 @@
 	<title>homework</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/IMSatomic.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/main.css">
+	<script src="js/game.js"></script>
 </head>
 <body>
 	<div id="container" class="flex_column flex-center-all height-all-screen">
@@ -15,9 +16,17 @@
 			</div>
 			<div class="min_space"></div>
 			<div class="square bg_blue">
-				<div class="ball relative bg_red border-rounded"></div>
+				<div id="ball" class="ball relative bg_red border-rounded"></div>
 			</div>
 		</div>
 	</div>
+	<script>
+		var game=new Game({
+			score:'score',
+			timer:'timer'
+		});
+		game.init();
+		document.querySelector('#ball').onclick=function(){game.incrementScore();};
+	</script>
 </body>
 </html>
