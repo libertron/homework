@@ -1,5 +1,6 @@
 function Game(data){
 	this.counter=0;
+	this.stop=false;
 	this.gameDataExist=typeof(data)!=='undefined';
 	this.ballID=(this.gameDataExist && typeof(data.ball)=='string')?data.ball:null;
 	this.scoreID=(this.gameDataExist && typeof(data.scoreScreen)=='string')?data.scoreScreen:null;
@@ -9,6 +10,7 @@ function Game(data){
 	this.randomXY=function(){
 		return {};
 	};
+
 	this.init=function(){
 		if(this.gameDataExist){
 			if(this.scoreID!==null){
@@ -17,8 +19,11 @@ function Game(data){
 			if(this.timer!==null){
 				document.querySelector('#'+this.timer).value=0+' ms';
 			}
+			this.counter=0;
+			this.score=0;
 		}
 	};
+
 	this.incrementScore=function(){
 		this.score++;
 
@@ -26,11 +31,21 @@ function Game(data){
 			document.querySelector('#'+this.scoreID).value=this.score;
 		}
 	};
+
 	this.start=function(){
 		this.init();
+		this.hideBall();
+		this.showBall();
 	};
-	this.hideBall=function(){
 
+	this.resetTimer=function(){
+		this.counter=0;
+		if(this.timer!==null){
+			document.querySelector('#'+this.timer).value=0+' ms';
+		}
+	};
+
+	this.hideBall=function(){
 		var interval=setInterval(function(){
 			document.querySelector('#'+timer).value=(++counter*4)+' ms';
 		},1,timer=this.timer,counter=this.counter);
