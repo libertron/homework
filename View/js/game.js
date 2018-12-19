@@ -1,4 +1,5 @@
 function Game(data){
+	this.counter=0;
 	this.gameDataExist=typeof(data)!=='undefined';
 	this.ballID=(this.gameDataExist && typeof(data.ball)=='string')?data.ball:null;
 	this.scoreID=(this.gameDataExist && typeof(data.scoreScreen)=='string')?data.scoreScreen:null;
@@ -29,12 +30,27 @@ function Game(data){
 		this.init();
 	};
 	this.hideBall=function(){
+
+		var interval=setInterval(function(){
+			document.querySelector('#'+timer).value=(++counter*4)+' ms';
+		},1,timer=this.timer,counter=this.counter);
+
 		setTimeout(function(){
 			document.querySelector('#'+ballID).style.display='none';
+			clearInterval(interval);
 
 		},1000,ballID=this.ballID);
 	};
+
 	this.showBall=function(){
-		setTimeout(function(){},2000);
+		var interval=setInterval(function(){
+				document.querySelector('#'+timer).value=(++counter *4)+' ms';
+			},1,timer=this.timer,counter=this.counter);
+
+			setTimeout(function(){
+				document.querySelector('#'+ballID).style.display='block';
+				clearInterval(interval);
+
+			},2000,ballID=this.ballID);
 	};
 }

@@ -15,6 +15,7 @@
 	width:40px;
 	height: 40px;
 	cursor: crosshair;
+	/*display: none;*/
 }
 #score,#timer,#start{
 	outline: none;
