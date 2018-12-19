@@ -22,8 +22,9 @@
 	</div>
 	<script>
 		var game=new Game({
-			score:'score',
-			timer:'timer'
+			scoreScreen:'score',
+			timer:'timer',
+			ball:'ball'
 		});
 		document.querySelector('#ball').onclick=function(){game.incrementScore();};
 		game.hideBall();
