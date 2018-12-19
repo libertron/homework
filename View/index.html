@@ -11,8 +11,8 @@
 		<div class="wrapper">
 			<div class="controll flex_row space-between">
 				<button id="start">Commencer</button>
-				<div><label>Timer <input id='timer' type="text" value="150 ms" readonly="readonly"></label></div>
-				<div><label>Score <input id='score' type="text" value="10" readonly="readonly"></label></div>
+				<div><label>Timer <input id='timer' type="text" value="0 ms" readonly="readonly"></label></div>
+				<div><label>Score <input id='score' type="text" value="0" readonly="readonly"></label></div>
 			</div>
 			<div class="min_space"></div>
 			<div class="square bg_blue">
@@ -25,7 +25,6 @@
 			score:'score',
 			timer:'timer'
 		});
-		game.init();
 		document.querySelector('#ball').onclick=function(){game.incrementScore();};
 	</script>
 </body>
