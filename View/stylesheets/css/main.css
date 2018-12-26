@@ -2,7 +2,6 @@
   color:none;
   background:none;
 }
-
 ::selection {
   color:none; 
   background:none;
@@ -15,7 +14,7 @@
 	width:40px;
 	height: 40px;
 	cursor: crosshair;
-	/*display: none;*/
+	position:relative;
 }
 #score,#timer,#start{
 	outline: none;
