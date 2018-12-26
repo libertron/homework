@@ -20,6 +20,9 @@ function Game(data){
 			if(this.timer!==null){
 				document.querySelector('#'+this.timer).value=0+' ms';
 			}
+			if(this.ballID!==null){
+				document.querySelector('#'+this. ballID).style.display='none';
+			}
 			this.counter=0;
 			this.score=0;
 		}
@@ -35,6 +38,12 @@ function Game(data){
 
 	this.start=function(){
 		this.init();
+		setTimeout(function(){
+			document.querySelector('#'+ ball).style.display='block';
+			setTimeout(function(){
+				document.querySelector('#'+this. ballID).style.display='none';
+			},1000,ball=this.ballID);
+		},2000);
 	};
 
 	this.resetTimer=function(){
