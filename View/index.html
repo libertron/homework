@@ -26,7 +26,10 @@
 			timer:'timer',
 			ball:'ball'
 		});
-		document.querySelector('#ball').onclick=function(){game.incrementScore();};
+		document.querySelector('#ball').onclick=function(){
+			if(!game.isStop)
+			game.incrementScore();
+		};
 		document.querySelector('#start').onclick=function(){
 			if(this.innerHTML=='Commencer'){
 				this.innerHTML='Arreter';

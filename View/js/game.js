@@ -2,7 +2,7 @@ function Game(data){
 	this.counter=0;
 	this.xy=0;
 	this.timeAndInt={interval1:null,interval2:null,interval3:null};
-	this.stop=false;
+	this.isStop=true;
 	this.gameDataExist=typeof(data)!=='undefined';
 	this.ballID=(this.gameDataExist && typeof(data.ball)=='string')?data.ball:null;
 	this.scoreID=(this.gameDataExist && typeof(data.scoreScreen)=='string')?data.scoreScreen:null;
@@ -41,6 +41,7 @@ function Game(data){
 
 	this.start=function(){
 		this.init();
+		this.isStop=false;
 		this.randomXY();
 		this.timeAndInt.interval1=setInterval(function(){
 			document.querySelector('#'+timer).value=++counter+' ms';
@@ -71,5 +72,6 @@ function Game(data){
 		clearInterval(this.timeAndInt.interval2);
 		clearInterval(this.timeAndInt.interval3);
 		this.init();
+		this.isStop=true;
 	}
 }
